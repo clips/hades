@@ -1,2 +1,2 @@
 # hades
-Reposiroty for the CLiPS HAte speech DEtection System [HADES].
+Repository for the CLiPS HAte speech DEtection System [HADES].
