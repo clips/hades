@@ -41,3 +41,20 @@ The dictionaries are in .csv format.
 The first word of each line is the category name, while the other words are the words in that category.
 Included is a python (2.7 & 3.x) script which reads in the dictionaries and outputs relative frequencies.
 It can be used for similar dictionaries, such as the LIWC dictionaries.
+
+## example
+
+```python
+from dictfeaturizer import DictFeaturizer
+
+# Load from csv
+d = DictFeaturizer.load("expanded.csv")
+text = "this is an example text".split()
+score = d.transform(text)
+
+# Direct initialization
+direct = {"good": ["good", "splendid"], "bad": ["bad", "useless"]}
+d = DictFeaturizer(direct, relative=False)
+text = "This stuff is splendid".split()
+score_2 = d.transform(text)
+```
